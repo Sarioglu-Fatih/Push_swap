@@ -1,0 +1,49 @@
+Ubuntu 23.08
+
+Se projet a pour but de faire un algo capable de trier des nombres sous forme de pile à l'aide d'une seconde pile vide et de commande tel que :
+
+		sa (swap a) : Intervertit les 2 premiers éléments au sommet de la pile a.
+			Ne fait rien s’il n’y en a qu’un ou aucun.
+
+		sb (swap b ) : Intervertit les 2 premiers éléments au sommet de la pile b.
+			Ne fait rien s’il n’y en a qu’un ou aucun.
+
+		ss : sa et sb en même temps.
+
+		pa (push a) : Prend le premier élément au sommet de b et le met sur a.
+			Ne fait rien si b est vide.
+
+		pb (push b) : Prend le premier élément au sommet de a et le met sur b.
+			Ne fait rien si a est vide.
+
+		ra (rotate a) : Décale d’une position vers le haut tous les élements de la pile a.
+			Le premier élément devient le dernier.
+
+		rb (rotate b) : Décale d’une position vers le haut tous les élements de la pile b.
+			Le premier élément devient le dernier.
+
+		rr : ra et rb en même temps.
+
+		rra (reverse rotate a) : Décale d’une position vers le bas tous les élements de
+			la pile a. Le dernier élément devient le premier.
+
+		rrb (reverse rotate b) : Décale d’une position vers le bas tous les élements de
+			la pile b. Le dernier élément devient le premier.
+
+		rrr : rra et rrb en même temps.
+
+
+La partie bonus permet de vérifier que la première pile est bien triée et que la seconde est vide.
+
+Vous pouvez compiler à l'aide de make et make bonus et exécuter le programme en y insérant des nombres à trier tel que :
+
+		./push_swap 4 2 8 1																				//	Les commandes utilisé sont affiché dans le terminal
+
+		./push_swap 4 2 8 1	| wc -l																		//	Le nombre de commande utilisé est affiché dans le terminal
+
+		ARG=`ruby -e "puts (1..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG							//	ATTENTION Avec cette commande la valeur de votre variable ARG dans votre environnement sera écrasé s'il existe ce qui n'est pas le cas par défaut, permet d'utiliser 100 nombres désordonné dans le programme
+
+		ARG=`ruby -e "puts (1..500).to_a.shuffle.join(' ')"`; ./push_swap $ARG | ./checker $ARG			//	Permet d'utiliser 500 nombres désordonné dans le programme
+
+
+Plus d'info dans subject.
