@@ -37,13 +37,17 @@ La partie bonus permet de vérifier que la première pile est bien triée et que
 
 Vous pouvez compiler à l'aide de make et make bonus et exécuter le programme en y insérant des nombres à trier tel que :
 
-		./push_swap 4 2 8 1																				//	Les commandes utilisé sont affiché dans le terminal
+./push_swap 4 2 8 1
+	Les commandes utilisé sont affiché dans le terminal
 
-		./push_swap 4 2 8 1	| wc -l																		//	Le nombre de commande utilisé est affiché dans le terminal
+./push_swap 4 2 8 1	| wc -l
+	Le nombre de commande utilisé est affiché
 
-		ARG=`ruby -e "puts (1..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG							//	ATTENTION Avec cette commande la valeur de votre variable ARG dans votre environnement sera écrasé s'il existe ce qui n'est pas le cas par défaut, permet d'utiliser 100 nombres désordonné dans le programme
+ARG=`ruby -e "puts (1..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG
+	ATTENTION Avec cette commande la valeur de votre variable ARG dans votre environnement sera écrasé s'il existe ce qui n'est pas le cas par défaut, permet d'utiliser 100 nombres désordonné dans le programme qui affichera les commandes utilisé
 
-		ARG=`ruby -e "puts (1..500).to_a.shuffle.join(' ')"`; ./push_swap $ARG | ./checker $ARG			//	Permet d'utiliser 500 nombres désordonné dans le programme
+ARG=`ruby -e "puts (1..500).to_a.shuffle.join(' ')"`; ./push_swap $ARG | ./checker $ARG
+	Permet d'utiliser 500 nombres désordonné dans le programme qui affichera si la pile est bien triée
 
 
 Plus d'info dans subject.
