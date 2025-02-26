@@ -48,6 +48,3 @@ ARG=`ruby -e "puts (1..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG
 
 ARG=`ruby -e "puts (1..500).to_a.shuffle.join(' ')"`; ./push_swap $ARG | ./checker $ARG
 	Permet d'utiliser 500 nombres désordonné dans le programme qui affichera si la pile est bien triée
-
-
-Plus d'info dans subject.
